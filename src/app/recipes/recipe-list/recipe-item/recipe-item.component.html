@@ -1,1 +1,22 @@
-<p>This is recipe-item component. Inside recipe-list: recipe-item works!</p>
+<a href="#" class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">
+      Recipe Name:{{ recipeElement.name }}
+    </h4>
+    <p class="list-group-item-text">
+      Description:{{ recipeElement.description }}
+    </p>
+  </div>
+  <span class="pull-right">
+    <!-- using string interpolation -->
+    <!-- <img src="{{ recipe.imagePath }}" /> -->
+
+    <!-- using property binding -->
+    <img
+      [src]="recipeElement.imagePath"
+      alt="{{ recipeElement.name }}"
+      class="img-responsive"
+      style="max-height: 50px"
+    />
+  </span>
+</a>
